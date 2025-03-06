@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us - Dicerino</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <!-- Same Navigation as index.html -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Dicerino</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container mt-5 pt-5">
+            <section class="contact-section">
+                <h1 class="text-center mb-5">Get in Touch</h1>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <h2>Contact Information</h2>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    hello@dicerino.com
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i> +63 9177 2425
+                                    30
+                                </li>
+                                <li>
+                                    <i class="fab fa-instagram"></i> @dicerinoph
+                                </li>
+                                <li>
+                                    <i class="fab fa-facebook"></i> Dicerino
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="social-media mt-4">
+                            <h2>Follow Us</h2>
+                            <div class="social-icons">
+                                <!-- Add social media icons/links -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <form class="contact-form" id="contactForm">
+                            <h2>Send us a Message</h2>
+                            <div class="mb-3">
+                                <label for="name" class="form-label"
+                                    >Name *</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label"
+                                    >Email *</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label"
+                                    >Subject</label
+                                >
+                                <select class="form-select" id="subject">
+                                    <option value="general">
+                                        General Inquiry
+                                    </option>
+                                    <option value="custom">Custom Order</option>
+                                    <option value="support">Support</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label"
+                                    >Message *</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="message"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section mt-5">
+                <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- Add FAQ items -->
+                </div>
+            </section>
+
+            <!-- Site Map -->
+            <div class="sitemap mt-5">
+                <!-- Same sitemap as index.html -->
+            </div>
+        </main>
+
+        <footer class="footer mt-5">
+            <!-- Same footer as index.html -->
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

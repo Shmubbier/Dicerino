@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dicerino - Custom Dice Shop</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Dicerino</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Sliding Images -->
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="../images/slide1.jpg"
+                        class="d-block w-100"
+                        alt="Dice Set 1"
+                    />
+                    <div class="carousel-caption">
+                        <h1>Welcome to Dicerino</h1>
+                        <p>Crafting Unique Custom Dice Since 2022</p>
+                    </div>
+                </div>
+                <!-- Add more carousel items -->
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <main class="container mt-5">
+            <!-- Featured Products with Lightbox -->
+            <section class="featured-products">
+                <h2>Featured Products</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a
+                            href="../images/dice1-large.jpg"
+                            data-lightbox="featured"
+                            data-title="Galaxy Dice Set"
+                        >
+                            <img
+                                src="../images/dice1-thumb.jpg"
+                                alt="Dice Set"
+                                class="img-fluid"
+                            />
+                        </a>
+                    </div>
+                    <!-- Add more product images -->
+                </div>
+            </section>
+
+            <!-- Quick Links Image Map -->
+            <section class="quick-links mt-5">
+                <img
+                    src="../images/navigation-map.jpg"
+                    alt="Navigation Map"
+                    usemap="#navmap"
+                    class="img-fluid"
+                />
+                <map name="navmap">
+                    <area
+                        shape="rect"
+                        coords="0,0,200,100"
+                        href="products.html"
+                        alt="Products"
+                    />
+                    <area
+                        shape="rect"
+                        coords="210,0,410,100"
+                        href="about.html"
+                        alt="About Us"
+                    />
+                    <area
+                        shape="rect"
+                        coords="420,0,620,100"
+                        href="contact.html"
+                        alt="Contact"
+                    />
+                </map>
+            </section>
+        </main>
+
+        <!-- Site Map -->
+        <div class="container mt-5">
+            <div class="sitemap">
+                <h3>Site Map</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="products.html">Products</a>
+                        <ul>
+                            <li>
+                                <a href="products.html#dice-sets">Dice Sets</a>
+                            </li>
+                            <li>
+                                <a href="products.html#individual"
+                                    >Individual Dice</a
+                                >
+                            </li>
+                            <li>
+                                <a href="products.html#custom">Custom Orders</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>Email: hello@dicerino.com</p>
+                        <p>Phone: +63 9177 2425 30</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <p>Instagram: @dicerinoph</p>
+                        <p>Facebook: Dicerino</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Developed by: [Your Names]</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

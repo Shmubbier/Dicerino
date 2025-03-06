@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products - Dicerino</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+        />
+        <style>
+            .carousel {
+                margin-top: 56px; /* Adjust based on your navbar height */
+            }
+
+            .carousel-item {
+                height: 500px; /* Fixed height for carousel */
+            }
+
+            .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .carousel-caption {
+                background: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .product-card {
+                transition: transform 0.3s ease;
+            }
+
+            .product-card:hover {
+                transform: translateY(-10px);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Dicerino</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html"
+                                >Products</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Product Slider -->
+        <div
+            id="productCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+        >
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#productCarousel"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                ></button>
+            </div>
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="../images/3393654293814562676_56490591394_1.jpg"
+                        class="d-block w-100"
+                        alt="Dice Set 1"
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="../images/3394339863976794051_56490591394_1.jpg"
+                        class="d-block w-100"
+                        alt="Dice Set 2"
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="../images/3398803832280110363_56490591394_1.jpg"
+                        class="d-block w-100"
+                        alt="Dice Set 3"
+                    />
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <main class="container">
+            <!-- Filters -->
+            <section class="filters">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-select" id="typeFilter">
+                            <option value="">All Types</option>
+                            <option value="sets">Complete Sets</option>
+                            <option value="individual">Individual Dice</option>
+                            <option value="custom">Custom Orders</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="styleFilter">
+                            <option value="">All Styles</option>
+                            <option value="galaxy">Galaxy</option>
+                            <option value="ocean">Ocean</option>
+                            <option value="glitter">Glitter</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card">
+                            <div id="product1Carousel" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img
+                                            src="../images/3393654293814562676_56490591394_1.jpg"
+                                            class="card-img-top"
+                                            alt="Product 1"
+                                        />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="../images/3393654293814562676_56490591394_2.jpg"
+                                            class="card-img-top"
+                                            alt="Product 1"
+                                        />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="../images/3393654293814562676_56490591394_3.jpg"
+                                            class="card-img-top"
+                                            alt="Product 1"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Custom Dice Set</h5>
+                                <p class="card-text">
+                                    Multiple angles of our handcrafted dice
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other products -->
+                </div>
+            </div>
+
+            <!-- Custom Order Section -->
+            <section class="custom-order mt-5">
+                <h2>Custom Commission Form</h2>
+                <form class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="diceType" class="form-label"
+                                    >Type of Dice</label
+                                >
+                                <select
+                                    class="form-select"
+                                    id="diceType"
+                                    required
+                                >
+                                    <option value="">Select Type</option>
+                                    <option value="set">Complete Set</option>
+                                    <option value="individual">
+                                        Individual Die
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="style" class="form-label"
+                                    >Style Preference</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="style"
+                                    placeholder="Describe your desired style"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="details" class="form-label"
+                            >Additional Details</label
+                        >
+                        <textarea
+                            class="form-control"
+                            id="details"
+                            rows="4"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Submit Commission Request
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Site Map -->
+        <div class="container mt-5">
+            <div class="sitemap">
+                <!-- Same sitemap as other pages -->
+            </div>
+        </div>
+
+        <footer class="footer mt-5">
+            <!-- Same footer as other pages -->
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Initialize carousel
+            document.addEventListener("DOMContentLoaded", function () {
+                var myCarousel = new bootstrap.Carousel(
+                    document.getElementById("productCarousel"),
+                    {
+                        interval: 3000, // Change slide every 3 seconds
+                        wrap: true, // Continuous loop
+                        keyboard: true, // Keyboard controls
+                    },
+                );
+            });
+        </script>
+    </body>
+</html>
