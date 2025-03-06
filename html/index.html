@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dicerino - Custom Dice Shop</title>
         <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="../css/style.css" />
@@ -21,8 +21,8 @@
                 <button
                     class="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,60 +48,123 @@
         </nav>
 
         <!-- Hero Section with Sliding Images -->
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="heroCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img
-                        src="../images/slide1.jpg"
+                        src="../images/3393654293814562676_56490591394_1.jpg"
                         class="d-block w-100"
-                        alt="Dice Set 1"
+                        alt="Custom Dice Set"
                     />
                     <div class="carousel-caption">
                         <h1>Welcome to Dicerino</h1>
                         <p>Crafting Unique Custom Dice Since 2022</p>
                     </div>
                 </div>
-                <!-- Add more carousel items -->
+                <div class="carousel-item">
+                    <img
+                        src="../images/3394339863976794051_56490591394_1.jpg"
+                        class="d-block w-100"
+                        alt="Galaxy Dice"
+                    />
+                    <div class="carousel-caption">
+                        <h1>Galaxy Collection</h1>
+                        <p>Discover our stellar designs</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="../images/3398803832280110363_56490591394_1.jpg"
+                        class="d-block w-100"
+                        alt="Special Edition Dice"
+                    />
+                    <div class="carousel-caption">
+                        <h1>Limited Editions</h1>
+                        <p>Unique designs for unique players</p>
+                    </div>
+                </div>
             </div>
-            <button
+            <a
                 class="carousel-control-prev"
-                type="button"
-                data-bs-target="#heroCarousel"
-                data-bs-slide="prev"
+                href="#heroCarousel"
+                role="button"
+                data-slide="prev"
             >
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a
                 class="carousel-control-next"
-                type="button"
-                data-bs-target="#heroCarousel"
-                data-bs-slide="next"
+                href="#heroCarousel"
+                role="button"
+                data-slide="next"
             >
-                <span class="carousel-control-next-icon"></span>
-            </button>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
         <main class="container mt-5">
-            <!-- Featured Products with Lightbox -->
-            <section class="featured-products">
-                <h2>Featured Products</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a
-                            href="../images/dice1-large.jpg"
-                            data-lightbox="featured"
-                            data-title="Galaxy Dice Set"
-                        >
-                            <img
-                                src="../images/dice1-thumb.jpg"
-                                alt="Dice Set"
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                    <!-- Add more product images -->
+<!-- Featured Products with Lightbox -->
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <a
+                href="../images/3393654293814562676_56490591394_1.jpg"
+                data-lightbox="featured"
+                data-title="Galaxy Swirl Dice Set"
+                class="product-card"
+            >
+                <img
+                    src="../images/3393654293814562676_56490591394_1.jpg"
+                    alt="Galaxy Swirl Dice Set"
+                    class="img-fluid"
+                />
+                <div class="product-info">
+                    <h5>Galaxy Swirl Dice Set</h5>
+                    <p>$45.99</p>
                 </div>
-            </section>
+            </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a
+                href="../images/3394339863976794051_56490591394_1.jpg"
+                data-lightbox="featured"
+                data-title="Ocean Depths Dice"
+                class="product-card"
+            >
+                <img
+                    src="../images/3394339863976794051_56490591394_1.jpg"
+                    alt="Ocean Depths Dice"
+                    class="img-fluid"
+                />
+                <div class="product-info">
+                    <h5>Ocean Depths Dice</h5>
+                    <p>$39.99</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-4">
+            <a
+                href="../images/3398803832280110363_56490591394_1.jpg"
+                data-lightbox="featured"
+                data-title="Nebula Dream Dice"
+                class="product-card"
+            >
+                <img
+                    src="../images/3398803832280110363_56490591394_1.jpg"
+                    alt="Nebula Dream Dice"
+                    class="img-fluid"
+                />
+                <div class="product-info">
+                    <h5>Nebula Dream Dice</h5>
+                    <p>$42.99</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
             <!-- Quick Links Image Map -->
             <section class="quick-links mt-5">
@@ -143,17 +206,9 @@
                     <li>
                         <a href="products.html">Products</a>
                         <ul>
-                            <li>
-                                <a href="products.html#dice-sets">Dice Sets</a>
-                            </li>
-                            <li>
-                                <a href="products.html#individual"
-                                    >Individual Dice</a
-                                >
-                            </li>
-                            <li>
-                                <a href="products.html#custom">Custom Orders</a>
-                            </li>
+                            <li><a href="products.html#dice-sets">Dice Sets</a></li>
+                            <li><a href="products.html#individual">Individual Dice</a></li>
+                            <li><a href="products.html#custom">Custom Orders</a></li>
                         </ul>
                     </li>
                     <li><a href="about.html">About Us</a></li>
@@ -182,7 +237,8 @@
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
         <script src="../js/main.js"></script>
     </body>
