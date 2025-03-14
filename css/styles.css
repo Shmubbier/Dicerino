@@ -1,0 +1,418 @@
+:root {
+    --primary-color: rgba(106, 27, 154, 1);      /* #6a1b9a */
+    --secondary-color: rgba(156, 39, 176, 1);    /* #9c27b0 */
+    --accent-color: rgba(225, 190, 231, 1);      /* #e1bee7 */
+    --dark: rgba(52, 58, 64, 1);                 /* #343a40 */
+    --light: rgba(248, 249, 250, 1);            /* #f8f9fa */
+    --gray: rgba(108, 117, 125, 1);             /* #6c757d */
+    --white: rgba(255, 255, 255, 1);            /* #fff */
+    --black: rgba(0, 0, 0, 1);                  /* #000 */
+}
+
+.navbar {
+    background-color: var(--black) !important;
+}
+
+.navbar-nav {
+    font-family: "Gloock", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.main-custom {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
+.jumbotron-custom {
+    position: relative;
+    background: url('../images/banner 2.png') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-top: 8vh;
+    overflow: hidden;
+}
+
+.jumbotron-custom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: backdrop-filter 1.5s ease-in-out, background 1.5s ease-in-out;
+}
+
+.jumbotron-custom:hover::before {
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron-custom .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: "Wix Madefor Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+footer {
+    font-family: "Gloock", serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+.footer p {
+    font-family: "Crimson Text", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.btn-custom {
+    color: white !important;
+}
+
+.thumbnail-img {
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+.thumbnail-img:hover, .thumbnail-img.active {
+    border: 2px solid var(--black);
+}
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.3s;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.product-image {
+    height: 200px;
+    object-fit: cover;
+}
+.modal-product-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+.variant-btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.quantity-selector {
+    width: 80px;
+}
+
+.carousel-inner {
+    padding: 20px 0;
+}
+.carousel-item {
+    transition: transform 0.6s ease;
+}
+.card {
+    margin: 0 auto;
+    max-width: 350px;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.125);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 1%;
+    opacity: 0.7;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 0%;
+}
+.carousel-indicators li {
+    background-color: rgba(136, 136, 136, 1);  /* #888 */
+}
+.carousel-indicators .active {
+    background-color: rgba(51, 51, 51, 1);     /* #333 */
+}
+h2.featured-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+.card-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(220, 53, 69, 1);               /* #dc3545 */
+    margin-bottom: 1rem;
+}
+
+.accordion .card-header {
+    background-color: var(--light);
+}
+
+.accordion .btn-link {
+    color: var(--dark);
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .btn-link:hover,
+.accordion .btn-link:focus {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.accordion .card {
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ Grid Styles */
+.faq-grid .card {
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.faq-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.faq-grid .card-header {
+    background-color: var(--light);
+}
+
+.faq-grid .btn-link {
+    color: var(--dark);
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+    font-weight: 600;
+}
+
+.faq-grid .btn-link:hover,
+.faq-grid .btn-link:focus {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* Mobile Styles */
+@media (max-width: 767.98px) {
+    .faq-grid .card {
+        margin-bottom: 1rem;
+    }
+
+    .faq-grid .collapse {
+        display: none;
+    }
+
+    .faq-grid .collapse.show {
+        display: block;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .faq-grid .collapse {
+        display: block;
+    }
+
+    .faq-grid .card-header button::after {
+        display: none;
+    }
+
+    .faq-grid .card {
+        cursor: default;
+    }
+}
+
+/* Contact Form Styles */
+.commission-guidelines h6 {
+    color: var(--dark);
+    margin-top: 1.5rem;
+}
+
+.commission-guidelines p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: var(--dark);
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25);
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .commission-guidelines {
+        margin-top: 2rem;
+    }
+}
+
+/* Timeline Styles */
+.timeline-container {
+    background: var(--light);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+}
+
+.timeline-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.timeline-wrapper {
+    height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--dark);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--dark);
+    border: 2px solid var(--white);
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-item .content {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item .content h5 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+.timeline-item .content p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Custom Scrollbar */
+.timeline-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 1);        /* #f1f1f1 */
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 1);        /* #888 */
+    border-radius: 3px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 1);           /* #555 */
+}

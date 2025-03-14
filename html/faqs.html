@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dicerino</title>
+        <title>FAQs</title>
         <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
             rel="stylesheet"
@@ -33,7 +33,7 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <header>
@@ -68,161 +68,153 @@
             </div>
         </nav>
     </header>
-    
-        <!-- Jumbotron -->
-        <div class="jumbotron jumbotron-fluid text-left jumbotron-custom">
-            <div class="container">
-                <h1 class="display-4">Let's roll!</h1>
-                <p class="lead">We create unique handmade artisan dice specifically for tabletop RPGs and boardgames!.</p>
-                <button type="button" class="btn btn-outline-light">SHOP NOW!</button>
-            </div>
-        </div> 
 
-    <!-- main -->
-    <main>
-        <div class="container mt-4">
-            <div class="row">
-                <!-- Featured Products Column -->
-                <div class="col-lg-8">
-                    <h2 class="featured-title">Featured Products</h2>
-                    <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#featuredCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#featuredCarousel" data-slide-to="1"></li>
-                            <li data-target="#featuredCarousel" data-slide-to="2"></li>
-                        </ol>
-                        
-                        <div class="carousel-inner">
-                            <!-- First Product -->
-                            <div class="carousel-item active">
-                                <div class="card">
-                                    <img src="../images/Rose Cloud(1).jpg" class="card-img-top" alt="rose cloud">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Rose Cloud</h5>
-                                        <p class="card-text">$45.99</p>
-                                        <a href="products.html" class="btn btn-outline-dark">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Second Product -->
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <img src="../images/Heat Signature(1).jpg" class="card-img-top" alt="heat signature">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Heat Signature</h5>
-                                        <p class="card-text">$39.99</p>
-                                        <a href="products.html" class="btn btn-outline-dark">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Third Product -->
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <img src="../images/Phthalo_driaar(1).jpg" class="card-img-top" alt="Product 3">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Phthalo Blue</h5>
-                                        <p class="card-text">$42.99</p>
-                                        <a href="products.html" class="btn btn-outline-dark">View Details</a>
-                                    </div>
-                                </div>
+    <!-- products -->
+    <main class="main-custom">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="container mt-5">
+            <div class="row faq-grid" id="faqAccordion">
+                <!-- Shop/Commission -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                    Shop/Commission Information
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <h5>Payment Methods Accepted:</h5>
+                                <ul>
+                                    <li>GCash</li>
+                                    <li>UnionBank</li>
+                                    <li>BPI</li>
+                                </ul>
+
+                                <h5>Commission Slot Schedule:</h5>
+                                <ul>
+                                    <li><strong>Summer (30 Slots)</strong> - April 30, estimated delivery date at July 01</li>
+                                    <li><strong>Monsoon (30 Slots)</strong> - August 30, estimated delivery date at November 01</li>
+                                </ul>
                             </div>
                         </div>
-                        
-                        <a class="carousel-control-prev" href="#featuredCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#featuredCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    
-                    <!-- View All Products Button -->
-                    <div class="text-center mt-4 mb-5">
-                        <a href="products.html" class="btn btn-outline-dark">View All Products</a>
                     </div>
                 </div>
 
-                <!-- Timeline Column -->
-                <div class="col-lg-4">
-                    <div class="timeline-container">
-                        <h2 class="timeline-title">Events Schedule</h2>
-                        <div class="timeline-wrapper">
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <span class="date">FEB 9</span>
-                                    <div class="content">
-                                        <h5>Grand Masquerade by Rainforest Renegades</h5>
-                                        <p>Apotheka Manila, Makati</p>
-                                    </div>
-                                </div>
+                <!-- Downpayments -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                    A. Downpayments
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>To secure your slot, kindly deposit 50% of the quoted price. The 45-60 days processing time starts on the initial receipt of the first payment.</p>
+                                <p>The other 50% can be settled after the final look and reveal of the product.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="timeline-item">
-                                    <span class="date">MAR 14-16</span>
-                                    <div class="content">
-                                        <h5>RenFaire 2025</h5>
-                                        <p>Igorot Stone Kingdom, Baguio</p>
-                                    </div>
-                                </div>
+                <!-- Shipping -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                    B. Shipping
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Shipping via Flash Express is now free for all orders.</p>
+                                <p>But you can pay to have it shipped on the same day and shoulder the courier fees.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="timeline-item">
-                                    <span class="date">APR 26-27</span>
-                                    <div class="content">
-                                        <h5>Patrons of the Arts: Davao Spring</h5>
-                                        <p>SMX Davao, Davao</p>
-                                    </div>
-                                </div>
+                <!-- Originality -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+                                    C. Originality and Recreation
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>We cannot and will not make a dice set/ dice exactly the same as your reference. We will use your reference as an inspiration but never to the tee. This is due to the unpredictability of how resin (and other factors) behave and also to ensure uniqueness of each dice and its design. Expect a slight alteration on the color, the movement, inclusion placement, paint, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="timeline-item">
-                                    <span class="date">MAY 17-18</span>
-                                    <div class="content">
-                                        <h5>Patrons of the Arts: Magics and Mystics</h5>
-                                        <p>Bayanihan Center, Pasig</p>
-                                    </div>
-                                </div>
+                <!-- Additional sections... -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive">
+                                    D. Waiting Time & E. Queue System
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <h5>Waiting Time:</h5>
+                                <p>Due to the current amount of orders we have, there is a 45-60 days long processing time. We appreciate your patience.</p>
+                                
+                                <h5>Queue System:</h5>
+                                <p>Your order is queued in line and we will be working on orders made before yours. Updates will be sent between the 25-30th day of the processing time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="timeline-item">
-                                    <span class="date">JUN</span>
-                                    <div class="content">
-                                        <h5>Tentative Event</h5>
-                                        <p>Location TBA</p>
-                                    </div>
-                                </div>
+                <!-- Refunds -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix">
+                                    F. Order Refusal and Refunds
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Respectfully, we will not tolerate rush pressure of any kind. We work on a "first come, first serve" basis.</p>
+                                <p>If you wish to forfeit your order you may do so only between 1-14th day of the processing time. Beyond this frame, we cannot grant a full refund.</p>
+                                <p>Dicerino reserves the right to refuse and refund an order at any given time due to personal emergencies, lack of material, machine malfunction or client disagreements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="timeline-item">
-                                    <span class="date">JUL 5-6</span>
-                                    <div class="content">
-                                        <h5>Patrons of the Arts: Originals 1</h5>
-                                        <p>Space at One Ayala, Makati</p>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                    <span class="date">OCT 18-19</span>
-                                    <div class="content">
-                                        <h5>Patrons of the Arts: POTAween</h5>
-                                        <p>Centris Elements, Quezon City</p>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                    <span class="date">NOV 15-16</span>
-                                    <div class="content">
-                                        <h5>Patrons of the Arts: Originals 2</h5>
-                                        <p>Centris Elements, Quezon City</p>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                    <span class="date">DEC 6-7</span>
-                                    <div class="content">
-                                        <h5>Singapore Comic Con</h5>
-                                        <p>Sans Expo & Convention Centre, Singapore</p>
-                                    </div>
-                                </div>
+                <!-- Rejected Dice -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven">
+                                    G. Refused/Rejected Dice
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSeven" class="collapse" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>Dicerino reserves the right to sell rejected designs in our art markets or online store(s).</p>
                             </div>
                         </div>
                     </div>
@@ -231,43 +223,8 @@
         </div>
     </main>
 
-    <!-- Bootstrap 4 JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    
-    <script>
-        // Auto-cycle carousel every 4 seconds
-        $(document).ready(function(){
-            $('#featuredCarousel').carousel({
-                interval: 4000
-            });
-        });
-    </script>
-
-    <!-- Bootstrap 4 JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    
-    <script>
-        // Optional: Pause carousel on hover
-        $('#featuredCarousel').hover(function() {
-            $(this).carousel('pause');
-        }, function() {
-            $(this).carousel('cycle');
-        });
-        
-        // Auto-cycle carousel every 5 seconds
-        $(document).ready(function(){
-            $('#featuredCarousel').carousel({
-                interval: 5000
-            });
-        });
-    </script>
-    
-    <!-- footer -->
-    <footer class="text-center">
+       <!-- footer -->
+       <footer class="text-center">
         <div class="container">
             <!-- Navigation Links -->
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
