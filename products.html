@@ -33,7 +33,7 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4xF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <header>
@@ -60,13 +60,41 @@
                         </li>
                     </ul>
                     <!-- cart -->
-                    <button type="button" class="btn bg-transparent ml-auto">
+                    <button type="button" class="btn bg-transparent ml-auto" data-toggle="modal" data-target="#cartModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cart2" viewBox="0 0 16 16">
                         <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
-                      </svg></button>
+                      </svg>
+                      <span class="badge badge-light" id="cartCount">0</span>
+                    </button>
                 </div>
             </div>
         </nav>
+
+        <!-- Shopping Cart Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="cartItems">
+                            <!-- Cart items will be dynamically added here -->
+                        </div>
+                        <div class="cart-total mt-3">
+                            <h5>Total: ₱<span id="cartTotal">0</span></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
+                        <button type="button" class="btn btn-primary" id="checkoutBtn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- products -->
@@ -544,7 +572,7 @@
                             <img src="../images/Lady Lillith's First Night.jpg" class="img-fluid modal-product-image" alt="Lady Lillith's First Night">
                         </div>
                         <div class="col-md-6">
-                            <h4>Lady Lillith's First Night</h4>
+                            <h4>Lady Lillith's First Night</h5>
                             <h5 class="text-primary mb-3">₱1100</h5>
                             <p>Lady Lillith's First Night is an enchanting dice set that captures the elegance and mystery of a moonlit night. The deep purples and shimmering accents make it a truly magical set.</p>
                             
@@ -712,5 +740,86 @@
             </ul>
         </div>
     </footer>   
+    <script>
+        // Cart functionality
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCount = document.getElementById('cartCount');
+            
+            // Clear current display
+            cartItems.innerHTML = '';
+            
+            // Calculate total and update display
+            let total = 0;
+            let itemCount = 0;
+            
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                itemCount += item.quantity;
+                
+                cartItems.innerHTML += `
+                    <div class="cart-item d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <h6 class="mb-0">${item.name}</h6>
+                            <small class="text-muted">₱${item.price} x ${item.quantity}</small>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart('${item.name}')">Remove</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartTotal.textContent = total;
+            cartCount.textContent = itemCount;
+        }
+
+        function removeFromCart(name) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index > -1) {
+                cart.splice(index, 1);
+                updateCartDisplay();
+            }
+        }
+
+        // Update all "Add to Cart" buttons to use the new functionality
+        document.querySelectorAll('.btn-outline-dark').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const card = this.closest('.card-body');
+                const name = card.querySelector('.card-title').textContent;
+                const price = parseInt(card.querySelector('.card-text').textContent.replace('₱', ''));
+                addToCart(name, price);
+            });
+        });
+
+        // Checkout button functionality
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            // Add your checkout logic here
+            alert('Proceeding to checkout...');
+        });
+    </script>
     </body>
 </html>
