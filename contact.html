@@ -32,8 +32,20 @@
             body {
                 background: linear-gradient(135deg, 
                     rgba(117,129,115,0.95) 0%,
-                    rgba(117,129,115,0.75) 100%);
+                    rgba(117,129,115,0.75) 100%) !important;
                 min-height: 100vh;
+            }
+
+            /* Add card styling to work better with the gradient background */
+            .card {
+                background-color: rgba(255, 255, 255, 0.9);
+                border: none;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Improve form readability */
+            .form-control {
+                background-color: rgba(255, 255, 255, 0.9);
             }
         </style>
     </head>
@@ -213,7 +225,7 @@
             </ul>
             <!-- Copyright Notice -->
             <p class="text-center text-white">© 2025 Dicerino</p>
-    
+
             <!-- Social Media and Contact Links -->
             <ul class="nav justify-content-center">
                 <!-- Facebook -->
@@ -224,7 +236,7 @@
                         </svg>
                     </a>
                 </li>
-    
+
                 <!-- Instagram -->
                 <li class="nav-item">
                     <a href="https://www.instagram.com/dicerinoph" target="_blank" class="btn btn-custom">
@@ -233,7 +245,7 @@
                         </svg>
                     </a>
                 </li>
-    
+
                 <!-- Email -->
                 <li class="nav-item">
                     <a href="mailto:hello@dicerino.com" target="_blank" class="btn btn-custom">
@@ -242,7 +254,7 @@
                         </svg>
                     </a>
                 </li>
-    
+
                 <!-- Phone -->
                 <li class="nav-item">
                     <a href="tel:+639177242530" target="_blank" class="btn btn-custom">
@@ -251,7 +263,7 @@
                         </svg>
                     </a>
                 </li>
-    
+
                 <!-- Donate -->
                 <li class="nav-item">
                     <a href="https://ganknow.com/dicerino/donate" target="_blank" class="btn btn-custom">
@@ -262,8 +274,19 @@
                     </a>
                 </li>
             </ul>
+
+            <!-- Developers Section -->
+            <div class="developers mt-4">
+                <p class="text-white mb-0">Developers:</p>
+                <small class="text-white-50">
+                    de Vera, Charles Andrei M.<br>
+                    Arrevillaga, Naomi Angela S.<br>
+                    Manzanares, Ranz Vincent C.<br>
+                    Chua, Tim Mark S.
+                </small>
+            </div>
         </div>
-    </footer>   
+    </footer>     
     <script>
         $(document).ready(function() {
             $('#contactForm').on('submit', function(e) {
