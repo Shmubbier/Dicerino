@@ -31,21 +31,33 @@
         <style>
             body {
                 background: linear-gradient(135deg, 
-                    rgba(117,129,115,0.95) 0%,
-                    rgba(117,129,115,0.75) 100%) !important;
+                    rgb(64, 64, 64) 0%,
+                    rgb(128, 128, 128) 50%,
+                    rgb(192, 192, 192) 100%) !important;
                 min-height: 100vh;
             }
 
             /* Add card styling to work better with the gradient background */
             .card {
-                background-color: rgba(255, 255, 255, 0.9);
+                background-color: rgba(255, 255, 255, 0.95);
                 border: none;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
             }
 
             /* Improve form readability */
             .form-control {
                 background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            /* Improve text contrast against dark background */
+            .main-custom h2 {
+                color: #ffffff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             }
         </style>
     </head>
